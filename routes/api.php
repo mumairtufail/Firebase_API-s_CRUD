@@ -22,12 +22,3 @@ Route::post('/', [TestController::class, 'create']);
 Route::get('/', [TestController::class, 'index']);
 Route::put('/', [TestController::class, 'edit']);
 Route::delete('/', [TestController::class, 'delete']);
-
-
-// composer require kreait/laravel-firebase --ignore-platform-req=ext-sodium
-
-// use this to install sdk fro firebase 
-
-// AND THIS TO SEND DATA USING COMMAND
-
-// Invoke-WebRequest -Uri http://localhost:8000/api/ -Method POST -Body @{title='hello from me'; content='This is from curl'}

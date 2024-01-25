@@ -16,7 +16,7 @@ class TestController extends Controller
 public function create(Request $request) 
 {
     $this->database
-        ->getReference('test/blogs/' . $request['title'])
+        ->getReference('blogs/' . $request['title'])
         ->set([
             'title' => $request['title'] ,
             'content' => $request['content']
@@ -27,11 +27,11 @@ public function create(Request $request)
 
 public function index() 
 {
-    return response()->json($this->database->getReference('test/blogs')->getValue());
+    return response()->json($this->database->getReference('blogs')->getValue());
 }
 public function edit(Request $request) 
 {
-    $this->database->getReference('test/blogs/' . $request['title'])
+    $this->database->getReference('blogs/' . $request['title'])
         ->update([
             'content/' => $request['content']
         ]);
